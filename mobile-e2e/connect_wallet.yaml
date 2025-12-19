@@ -1,0 +1,6 @@
+appId: com.tokenmetrics.app
+---
+- launchApp
+- tapOn: "Connect Wallet"
+- assertVisible: "Wallet Connected"
+- assertVisible: "USDC Balance"
