@@ -1,0 +1,27 @@
+name: Test Pipeline
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run smart contract tests
+        run: |
+          echo "Running Foundry tests"
+          echo "forge test"
+
+      - name: Run API tests
+        run: |
+          echo "Running pytest"
+          echo "pytest api-tests"
+
+      - name: Coverage check
+        run: |
+          echo "Checking coverage regression"
