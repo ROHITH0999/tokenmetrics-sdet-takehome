@@ -1,0 +1,7 @@
+appId: com.tokenmetrics.app
+---
+- tapOn: "Stable Vault"
+- inputText:
+    text: "1000000"
+- tapOn: "Deposit"
+- assertVisible: "Insufficient funds"
